@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API randomuser</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="contenido">
+    <header>
+      <div class="contenedor">
+        <h1>Random User Generator API</h1>
+      </div>
+    </header>
+    <div class="alerta">
+
+    </div>
+    <div id="modal" class="modalContainer">
+    </div>
+    <main>
+      <div class="contenedor-main">
+        <div class="formulario">
+          <form id="form">
+            <input type="number" name="numUsuarios" placeholder="Numero de usuarios" pattern="/^[0-9]+$/" required>
+            <input type="submit" value="Generar">
+          </form>
+        </div>
+        <table class="tabla-usuarios">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Genero</th>
+              <th>Telefono</th>
+              <th>Correo</th>
+              <th>Mas info</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="cargando"></div>
+        <div class="btns">
+          <button class="anterior is-active"> Anterior</button>
+          <button class="siguiente is-active">Siguiente</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+  <template id="user-template">
+    <tr>
+      <th class="id"></th>
+      <th class="nombre"></th>
+      <th class="apellido"></th>
+      <th class="genero"></th>
+      <th class="telefono"></th>
+      <th class="correo"></th>
+      <th><button class="info" data-id="">Mas informacion..</button></th>
+    </tr>
+  </template>
+  <script src="./assets/js/index.js" type="module"></script>
+</body>
+
+</html>
